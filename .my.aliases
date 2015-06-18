@@ -1,0 +1,32 @@
+alias vncserver 'vncserver -randr 1920x1200,1920x1080,1920x1000,1050x1670,1024x768 -fp catalogue:/etc/X11/fontpath.d,built-ins'
+alias gvim '~/Apps/vim/bin/gvim'
+alias grep 'grep --color=always'
+
+alias python '/home/robn/Apps/python27/bin/python2.7'
+alias python2 '/home/robn/Apps/python27/bin/python2.7'
+setenv LS_COLORS 'di=36:fi=32:ln=46;1;90:pi=5:so=5:bd=5:cd=5;106:or=31;5;101:mi=31;5;101:ex=33'
+#http://linux-sxs.org/housekeeping/lscolors.html
+
+alias python2.7 '/home/robn/Apps/python27/bin/python2.7'
+
+alias firefox '/home/robn/Apps/firefox/firefox'
+
+alias bar bar1
+alias b bar
+
+alias bar4 "echo '\033[0;106m *************************************** \033[0;0m \n' && alias bar bar1"
+alias bar1 "echo '\033[0;105m *************************************** \033[0;0m \n' && alias bar bar2"
+alias bar2 "echo '\033[0;103m *************************************** \033[0;0m \n' && alias bar bar3"
+alias bar3 "echo '\033[0;102m *************************************** \033[0;0m \n' && alias bar bar4"
+
+alias 1200 'xrandr -s 0'
+alias 1080 'xrandr -s 1'
+alias 1000 'xrandr -s 2'
+alias tall 'xrandr -s 3'
+alias 768 'xrandr -s 4'
+
+#josh's computer
+alias joshdot1 'source /xilinx_tools/Vivado/2015.1/settings64.csh'
+
+
+
