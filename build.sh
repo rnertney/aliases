@@ -1,20 +1,45 @@
 #!/bin/tcsh
 
-rm dump.txt
-
-if ( $1 == {clean} ) then
+mkdir images
+#########################################
+if ( $1 == {uboot} ) then
+  cd u-boot-xlnx
+  echo "***UBOOT BUILD***"
+  if ( $2 == {clean} ) then
     bar
-    echo "cleaning"
+    echo "***UBOOT CLEAN***"
     make clean
+  endif
+  bar2
+  make zynq_zc70x_config
+  make -j15
+
+  cp u-boot ../images/u-boot.elf
+
+  arm-xilinx-eabi-objdump -h u-boot.elf > dump.txt
+  grep text dump.txt
+#########################################
+else if ( $1 == {linux} ) then
+  echo "***LINUX BUILD***"
+  cd linux-xlnx
+  if ( $2 == {clean} ) then
+    bar
+    echo "***LINUX CLEAN***"
+    make clean
+  endif
+
+  bar2
+  make ARCH=arm xilinx_zynq_defconfig
+  make ARCH=arm UIMAGE_LOADADDR=0x8000 uImage -j15
+  cp arch/arm/boot/uImage ../images/
+########################################
+else
+  cd images
+  echo "***DEVICETREE BUILD***"
+  ../linux-xlnx/scripts/dtc/dtc -I dts -O dtb -o devicetree.dtb zynq-zc702.dts
 endif
-bar2
-make zynq_zc70x_config
-make -j15
 
-cp u-boot u-boot.elf
 
-arm-xilinx-eabi-objdump -h u-boot.elf > dump.txt
-grep text dump.txt
 ##############----UBOOT DEBUG------##############
 # get size of .text, put into offset size in SDK
 # get VMA, add to "bdinfo" line for  reloc_offset from u-boot
@@ -32,26 +57,4 @@ grep text dump.txt
 # rea
 
 
-#void mmu_forbid_region(u32 start, int size)
-#{
-#  u32 *page_table = (u32 *)gd->arch.tlb_addr;
-#  u32 upto, end;
-#
-#  end = ALIGN(start + size, MMU_SECTION_SIZE) >> MMU_SECTION_SHIFT;
-#  start = start >> MMU_SECTION_SHIFT;
-#  debug("%s: start=%x, size=%x, option=FORBID\n", __func__, start, size);
-#  for (upto = start; upto < end; upto++)
-#    forbid_section_dcache(upto);
-#  mmu_page_table_flush((u32)&page_table[start], (u32)&page_table[end]);
-#}
-#
-#//TODO:check the shifted
-#void forbid_section_dcache(int section)
-#{
-#   u32 *page_table = (u32 *)gd->arch.tlb_addr;
-#   u32 value;
-#
-#   value = (section << MMU_SECTION_SHIFT);
-#   page_table[section] = value;
-#}
-#
+
