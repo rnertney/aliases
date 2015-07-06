@@ -27,6 +27,6 @@ alias 768 'xrandr -s 4'
 
 #josh's computer
 alias joshdot1 'source /xilinx_tools/Vivado/2015.1/settings64.csh'
-
-
+alias joshdot4 'source /xilinx_tools/Vivado/2014.4/settings64.csh'
+alias joshdot2 'source /xilinx_tools/Vivado/2015.2/settings64.csh'
 
