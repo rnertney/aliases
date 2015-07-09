@@ -30,3 +30,5 @@ alias joshdot1 'source /xilinx_tools/Vivado/2015.1/settings64.csh'
 alias joshdot4 'source /xilinx_tools/Vivado/2014.4/settings64.csh'
 alias joshdot2 'source /xilinx_tools/Vivado/2015.2/settings64.csh'
 
+#create and cd into
+alias mkcd 'mkdir -p \!* && cd \!*'
