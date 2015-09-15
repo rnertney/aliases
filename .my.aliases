@@ -33,6 +33,7 @@ alias joshdot2 'source /xilinx_tools/Vivado/2015.2/settings64.csh'
 alias cda2015.2 'source /tmp/xilinx_tools/Vivado/2015.2/settings64.csh'
 alias cda2015.1 'source /tmp/xilinx_tools/Vivado/2015.1/settings64.csh'
 alias cda2014.4 'source /tmp/xilinx_tools/Vivado/2014.4/settings64.csh'
+alias cda14.7 'source /tmp/xilinx_tools/14.7/ISE_DS/settings64.csh'
 
 alias local 'cd /tmp/nertney'
 #create and cd into
