@@ -30,11 +30,15 @@ alias joshdot1 'source /xilinx_tools/Vivado/2015.1/settings64.csh'
 alias joshdot4 'source /xilinx_tools/Vivado/2014.4/settings64.csh'
 alias joshdot2 'source /xilinx_tools/Vivado/2015.2/settings64.csh'
 
-alias cda2015.2 'source /tmp/xilinx_tools/Vivado/2015.2/settings64.csh'
-alias cda2015.1 'source /tmp/xilinx_tools/Vivado/2015.1/settings64.csh'
-alias cda2014.4 'source /tmp/xilinx_tools/Vivado/2014.4/settings64.csh'
-alias cda14.7 'source /tmp/xilinx_tools/14.7/ISE_DS/settings64.csh'
+alias cda2015.2 'source /scratch/xilinx_tools/Vivado/2015.2/settings64.csh'
+alias cda2015.1 'source /scratch/xilinx_tools/Vivado/2015.1/settings64.csh'
+alias cda2014.4 'source /scratch/xilinx_tools/Vivado/2014.4/settings64.csh'
+alias cda2015.3 'source /scratch/xilinx_tools/Vivado/2015.3/settings64.csh'
+alias cda14.7 'source /scratch/xilinx_tools/14.7/ISE_DS/settings64.csh'
 
-alias local 'cd /tmp/nertney'
 #create and cd into
 alias mkcd 'mkdir -p \!* && cd \!*'
+
+alias gitclean 'git fetch origin && git reset --hard origin/master && git clean -d -f'
+
+alias qdriv 'cadman add -t xilinx -v 2015.3_0923_1'
