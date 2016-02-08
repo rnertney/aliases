@@ -34,6 +34,8 @@ alias josh2015.2 'source /xilinx_tools/Vivado/2015.2/settings64.csh'
 alias josh2015.3 'source /xilinx_tools/Vivado/2015.3/settings64.csh'
 alias josh2015.4 'source /xilinx_tools/Vivado/2015.4/settings64.csh'
 
+alias sdsoc2015.4 'source /proj/xbuilds/2015.4_sdsoc_daily_latest/installs/lin64/SDSoC/2015.4/settings64.csh'
+
 alias cda2015.2 'source /scratch/xilinx_tools/Vivado/2015.2/settings64.csh'
 alias cda2015.1 'source /scratch/xilinx_tools/Vivado/2015.1/settings64.csh'
 alias cda2014.4 'source /scratch/xilinx_tools/Vivado/2014.4/settings64.csh'
