@@ -2,6 +2,8 @@ alias vncserver 'vncserver -randr 1920x1200,1920x1080,1920x1000,1050x1670,1024x7
 alias gvim '~/Apps/vim/bin/gvim'
 alias grep 'grep --color=always'
 
+
+alias restore_links 'ln -s /group/bcapps/robn bcapps && ln -s /group/techsup/robn techsup'
 alias xsdk 'xsdk -vmargs -Dorg.eclipse.swt.internal.gtk.cairoGraphics="false"'
 
 alias python '/home/robn/Apps/python27/bin/python2.7'
