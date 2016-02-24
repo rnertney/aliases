@@ -3,7 +3,7 @@ alias gvim '~/Apps/vim/bin/gvim'
 alias grep 'grep --color=always'
 
 
-alias restore_links 'ln -s /group/bcapps/robn bcapps && ln -s /group/techsup/robn techsup'
+alias restore_links 'ln -s /group/bcapps/robn /home/robn/bcapps && ln -s /group/techsup/robn /home/robn/techsup && ln -s /group/techsup/robn/drop_point /home/robn/drop'
 alias xsdk 'xsdk -vmargs -Dorg.eclipse.swt.internal.gtk.cairoGraphics="false"'
 
 alias python '/home/robn/Apps/python27/bin/python2.7'
