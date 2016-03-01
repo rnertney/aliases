@@ -1,4 +1,4 @@
-alias vncserver 'vncserver -randr 1920x1200,1920x1080,1920x1000,1050x1670,1024x768 -fp catalogue:/etc/X11/fontpath.d,built-ins'
+alias vncserver 'vncserver -randr 1920x1200,1920x1080,1920x1000,1050x1670,1024x768,1500x1000,1500x920 -fp catalogue:/etc/X11/fontpath.d,built-ins'
 alias gvim '~/Apps/vim/bin/gvim'
 alias grep 'grep --color=always'
 
@@ -28,6 +28,8 @@ alias 1080 'xrandr -s 1'
 alias 1000 'xrandr -s 2'
 alias tall 'xrandr -s 3'
 alias 768 'xrandr -s 4'
+alias 1500 'xrandr -s 5'
+alias 920 'xrandr -s 6'
 
 #josh's computer
 alias josh2014.4 'source /xilinx_tools/Vivado/2014.4/settings64.csh'
